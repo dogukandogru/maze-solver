@@ -74,7 +74,7 @@ class Maze(object):
                               'n': '╵',
                               'w': '╴'}
 
-    def __init__(self, width=20, height=10):
+    def __init__(self, width=5, height=5):
         """
         Creates a new maze with the given sizes, with all walls standing.
         """
@@ -249,8 +249,10 @@ class Maze(object):
         m.randomize()
         return m
                     
-
+    
+        
 class MazeGame(object):
+   
     """
     Class for interactively playing random maze games.
     """
@@ -271,7 +273,10 @@ class MazeGame(object):
         x, y = pos
         # Double x position because displayed maze is double-wide.
         console.set_display(y * 2 + 1, x * 4 + 2, value)
-
+        
+    
+        
+        
     def play(self):
         """
         Starts an interactive game on this maze, with random starting and goal
